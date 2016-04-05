@@ -51,10 +51,8 @@ export function provisionPackageJson() {
             'access:sudo': 'npm access grant read-write economist:read-write-all $npm_package_name',
             build: 'npm-run-all --parallel build:*',
             'semantic-release': 'semantic-release pre || exit 0; npm publish && semantic-release post',
-            provision: 'provision-react-component',
           },
           devDependencies: {
-            '@economist/provision-react-component': moduleJson.version,
             'eslint-plugin-filenames': packageVersions['eslint-plugin-filenames'],
             'eslint-plugin-react': packageVersions['eslint-plugin-react'],
             'live-server': packageVersions['live-server'],
